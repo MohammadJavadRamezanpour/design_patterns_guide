@@ -18,9 +18,18 @@ class RasterShape:
     def draw_raster(self):
         print("Drawing raster shape")
 
+# Client code expects objects with draw_vector()
+def draw_all(shapes):
+    for shape in shapes:
+        shape.draw_vector()
+
 # Usage
+vector = VectorShape()
 raster = RasterShape()
-raster.draw_raster()  # Works, but incompatible with code expecting VectorShape
+
+# This crashes because RasterShape doesn't have draw_vector()
+draw_all([vector, raster])  
+# AttributeError: 'RasterShape' object has no attribute 'draw_vector'
 ```
 
 ### ⚠ Problems with Bad Code

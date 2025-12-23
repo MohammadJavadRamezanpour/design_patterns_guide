@@ -26,6 +26,27 @@ The main creational patterns are:
 4. Think about real-world scenarios where each pattern could be useful.
 
 ---
+ 
+ ## 🗂 Folder Structure
+ 
+ Each creational pattern has its own folder with:
+ 
+ * `pattern_name.py` – Example implementation
+ * `README.md` – Detailed explanation
+ 
+ Example structure:
+ 
+ ```
+ Creational Patterns/
+ ├─ Singleton Pattern/
+ │   └─ README.md
+ ├─ Factory Pattern/
+ │   └─ README.md
+ ├─ Builder Pattern/
+ │   └─ README.md
+ ```
+ 
+ ---
 
 ## 💡 Tips
 

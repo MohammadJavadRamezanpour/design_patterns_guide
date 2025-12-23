@@ -30,20 +30,20 @@ Each structural pattern has its own folder with:
 Example structure:
 
 ```
-structural/
-├─ adapter/
+Structural Patterns/
+├─ Adapter Pattern/
 │   └─ README.md
-├─ bridge/
+├─ Bridge Pattern/
 │   └─ README.md
-├─ composite/
+├─ Composite Pattern/
 │   └─ README.md
-├─ decorator/
+├─ Decorator Pattern/
 │   └─ README.md
-├─ facade/
+├─ Facade Pattern/
 │   └─ README.md
-├─ flyweight/
+├─ Flyweight Pattern/
 │   └─ README.md
-└─ proxy/
+└─ Proxy Pattern/
 │   └─ README.md
 ```
 

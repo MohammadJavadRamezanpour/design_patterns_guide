@@ -26,10 +26,10 @@ This repo follows the **Gang of Four (GoF) classification**:
 ```
 design-patterns/
 │
-├─ creational/      # Singleton, Factory, Builder, Prototype, etc.
-├─ structural/      # Adapter, Decorator, Proxy, Composite, etc.
-├─ behavioral/      # Observer, Strategy, Command, State, etc.
-├─ README.md        # This file
+├─ Creational Patterns/     # Singleton, Factory, Builder, Prototype, etc.
+├─ Structural Patterns/     # Adapter, Decorator, Proxy, Composite, etc.
+├─ Behavioral Patterns/     # Observer, Strategy, Command, State, etc.
+├─ README.md                # This file
 ```
 
 Each pattern folder contains:

@@ -38,13 +38,13 @@ Each pattern has its own folder:
 Example:
 
 ```
-behavioral/
-├─ strategy/
-│   ├─ README.md
-├─ observer/
-│   ├─ README.md
-└─ state/
-    ├─ README.md
+Behavioral Patterns/
+├─ Strategy Pattern/
+│   └─ README.md
+├─ Observer Pattern/
+│   └─ README.md
+├─ State Pattern/
+│   └─ README.md
 ```
 
 ---

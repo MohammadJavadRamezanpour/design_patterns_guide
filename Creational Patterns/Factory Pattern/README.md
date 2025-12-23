@@ -7,45 +7,67 @@ If you create each shape directly in your code, adding new shapes requires modif
 
 ---
 
-## 🖥 Example of Bad Approach
+## 🖥 Bad Code Example
 
-* Directly instantiating objects everywhere.
-* Every time a new shape is added, you need to update all code where shapes are created.
-* Violates the **Open/Closed Principle** because code has to be modified instead of extended.
+```python
+# Directly creating objects in client code
+shape_type = "circle"
+if shape_type == "circle":
+    shape = Circle()
+elif shape_type == "square":
+    shape = Square()
+
+shape.draw()
+```
+
+### ⚠ Problems with Bad Code
+
+* Client code is **tightly coupled** to concrete classes.
+* Adding a new shape requires modifying multiple places.
+* Violates the **Open/Closed Principle**.
 
 ---
 
-## ✅ Factory Pattern (Good Approach)
+## ✅ Good Code Example (Factory Pattern)
 
-The **Factory Pattern** allows you to **create objects without specifying the exact class**. A Factory class or method handles object creation, making it easier to add new types.
+```python
+# Factory creates objects instead of the client
+class ShapeFactory:
+    @staticmethod
+    def create_shape(shape_type):
+        if shape_type.lower() == "circle":
+            return Circle()
+        elif shape_type.lower() == "square":
+            return Square()
+        else:
+            raise ValueError(f"Unknown shape type: {shape_type}")
 
-### How It Works
+# Usage
+shape = ShapeFactory.create_shape("circle")
+shape.draw()
+shape = ShapeFactory.create_shape("square")
+shape.draw()
+```
 
-* You define a **common interface** for your products (e.g., `Shape`).
-* Each concrete product implements the interface (e.g., `Circle`, `Square`).
-* The Factory class decides which concrete product to create based on input.
+### Benefits of Good Code
 
-### Benefits
-
-* **Decouples object creation from usage** – Clients don’t need to know which exact class is being used.
-* **Open/Closed Principle** – Add new shapes without modifying existing code.
-* **Easy to maintain** – Centralized creation logic.
+* Decouples object creation from usage.
+* Open/Closed Principle – Adding new shapes doesn’t require changing client code.
+* Centralized, maintainable object creation logic.
 
 ---
 
 ## 🔹 How to Use
 
-1. Read the README to understand the concept.
-2. Think about the product types and interfaces you need.
-3. Imagine a Factory that returns the correct product based on input.
-4. Apply it in your code to simplify object creation.
+1. Identify objects that change frequently.
+2. Use a Factory to create these objects instead of directly instantiating them.
+3. Extend the Factory when adding new types without modifying client code.
 
 ---
 
 ## 💡 Tips
 
-* Start by identifying objects that change frequently in your system.
-* Use Factory Pattern to **avoid tightly coupled code**.
-* Combine with other creational patterns if needed for more complex object creation scenarios.
+* Start with simple objects like Shapes or Products.
+* Use Factory Pattern to **avoid tightly coupled code** and make your system more flexible.
 
 Happy learning and experimenting with the Factory Pattern! 🚀

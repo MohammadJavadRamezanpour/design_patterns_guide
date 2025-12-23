@@ -36,11 +36,9 @@ Each pattern folder contains:
 
 * A **code example** showing the pattern in action
 * A **README.md** explaining:
-
-  * Intent
-  * Structure (UML if applicable)
-  * Example scenario
-  * Pros & Cons
+  * Problem
+  * Bad Code Example
+  * Good Code Example
 
 ---
 
